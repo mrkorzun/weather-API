@@ -24,3 +24,19 @@ TODO: Weather card template:
   </ul>
 </div>
 */
+
+const refs = {
+  form: document.querySelector('.js-search-form'),
+};
+console.log(refs.form);
+
+const onFormSubmit = event => {
+  event.preventDefault();
+  const cityName = event.target.elements.user_country.value.trim();
+
+  if (!cityName) {
+    return alert('Error');
+  }
+};
+
+refs.form.addEventListener('submit', onFormSubmit);
